@@ -52,7 +52,7 @@ do
       ./create-htmlreport.postscript.sh
     fi
 
-    rm -rf /usr/share/nginx/html/* && mv /usr/share/nginx/html-tmp /usr/share/nginx/html
+    rm -rf /usr/share/nginx/html/* && mv /usr/share/nginx/html-tmp/* /usr/share/nginx/html
     echo "-> HTML report generated!"
 
     GIT_HASH_OLD=$GIT_HASH_NEW
