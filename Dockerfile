@@ -2,8 +2,8 @@ FROM nginx:1.25.3
 
 MAINTAINER Stéphane Gully <gully@abes.fr>
 
-ENV ARCHI_VERSION 5.4.3
-ENV ARCHI_PLUGIN_MODELREPOSITORY_VERSION 0.8.8
+ENV ARCHI_VERSION=5.4.3
+ENV ARCHI_PLUGIN_MODELREPOSITORY_VERSION=0.9.2
 
 
 WORKDIR /
@@ -35,8 +35,8 @@ RUN mkdir -p ~/.archi/dropins && \
 COPY ./.version /usr/share/nginx/html/
 COPY ./docker-entrypoint.sh /
 COPY ./create-htmlreport.periodically.sh /
-RUN echo "abesesr/archi-htmlreport-docker:1.6.1 generated web site is empty." > /usr/share/nginx/html/index.html && \
-    echo "abesesr/archi-htmlreport-docker:1.6.1" > /version.html
+RUN echo "evlibra/archi-htmlreport-docker:latest generated web site is empty." > /usr/share/nginx/html/index.html && \
+    echo "evlibra/archi-htmlreport-docker:latest" > /version.html
 
 # for git clone through ssh stuff
 RUN mkdir -p /root/.ssh/
