@@ -12,7 +12,7 @@ services:
     volumes:
     #  - ./id_rsa_archi:/root/.ssh/id_rsa.orig
     #  - ./id_rsa_archi.pub:/root/.ssh/id_rsa.pub.orig
-       - ../model:/usr/share/nginx/html
+       - ./model:/usr/share/nginx/html
     environment:
       GIT_CHECK_EACH_NBMINUTES: ${GIT_CHECK_EACH_NBMINUTES}
       GIT_REPOSITORY: ${GIT_REPOSITORY}
